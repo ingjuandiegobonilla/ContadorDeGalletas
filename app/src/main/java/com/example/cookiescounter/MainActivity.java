@@ -84,10 +84,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(this, "Galleta contada", Toast.LENGTH_SHORT).show(); //Se genera un mensaje Toast para mostrar al usuario que si se ejecuto la función
                 break;
 
-            case R.id.Rcontar:
-                conteo = 0;
-                Tcontar.setText(String.valueOf((conteo)));
-                Toast.makeText(this, "Reset completado", Toast.LENGTH_SHORT).show();
+            case R.id.Rcontar: //en el caso de que se presiona el boton Resetear
+                conteo = 0; //se pone la variable conteo en 0
+                Tcontar.setText(String.valueOf((conteo))); //se muestra la varibale conteo en el textView Tcontar
+                Toast.makeText(this, "Reset completado", Toast.LENGTH_SHORT).show(); //Se genera un mensaje Toast para mostrar al usuario que si se ejecuto la función
                 break;
 
 
