@@ -19,10 +19,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate");
+
+        if (savedInstanceState != null) {
+            // Restore value of members from saved state
+            conteo = savedInstanceState.getInt(CONTAR);
+        }
+
         setContentView(R.layout.activity_main);
         Tcontar = findViewById(R.id.Tcontar);
         Tcontar.setText(String.valueOf(conteo));
-
 
         Button Bcontar = findViewById(R.id.Bcontar);
         Bcontar.setOnClickListener(this);
@@ -62,10 +67,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
         Log.d(TAG, "onSaveInstanceState:");
-        outState.putInt(CONTAR, conteo);
-        super.onSaveInstanceState(outState);
+        savedInstanceState.putInt(CONTAR, conteo);
+        super.onSaveInstanceState(savedInstanceState);
     }
 
     @Override
