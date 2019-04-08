@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">CookiesCounter</string>
     <string name="TConteo">Galletas contadas</string>
+    <string name="Rconteo">Resetear conteo</string>
 </resources>
