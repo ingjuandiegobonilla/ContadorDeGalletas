@@ -1,6 +1,7 @@
 package com.example.cookiescounter;
 
 // Se importan librerias usadas en el proyecto
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -34,6 +35,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button Rcontar = findViewById(R.id.Rcontar); //Se enlaza el boton Rcontar del .xml y se crea la variable Rcontar en el .java
         Rcontar.setOnClickListener(this); //se indica que este boton es clickeable con el onClickListener de esta actividad (this)
+
+        Button Bdos = findViewById(R.id.Bdos);
+        Bdos.setOnClickListener(this);
     }
 
     @Override
@@ -81,13 +85,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.Bcontar:   //en el caso de que se presiona el boton Contar
                 conteo++;        //se suma 1 a la variable conteo
                 Tcontar.setText(String.valueOf((conteo))); //se muestra la varibale conteo en el textView Tcontar
-                Toast.makeText(this, "Galleta contada", Toast.LENGTH_SHORT).show(); //Se genera un mensaje Toast para mostrar al usuario que si se ejecuto la función
+                // Toast.makeText(this, "Galleta contada", Toast.LENGTH_SHORT).show(); //Se genera un mensaje Toast para mostrar al usuario que si se ejecuto la función
                 break;
 
             case R.id.Rcontar: //en el caso de que se presiona el boton Resetear
                 conteo = 0; //se pone la variable conteo en 0
                 Tcontar.setText(String.valueOf((conteo))); //se muestra la varibale conteo en el textView Tcontar
                 Toast.makeText(this, "Reset completado", Toast.LENGTH_SHORT).show(); //Se genera un mensaje Toast para mostrar al usuario que si se ejecuto la función
+                break;
+
+            case R.id.Bdos:
+                Intent actividaddos = new Intent(this,dos.class);
+                startActivity(actividaddos);
                 break;
 
 
