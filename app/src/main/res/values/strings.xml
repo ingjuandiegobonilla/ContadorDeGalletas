@@ -4,4 +4,7 @@
     <string name="Rconteo">Resetear conteo</string>
     <string name="next">Siguiente Actividad</string>
     <string name="Appname2">CookiesCounter2</string>
+    <string name="fondo">Imagen1</string>
+    <string name="titleicon">Icono superior</string>
+    <string name="aplicar_wallpaper">Aplicar Wallpaper</string>
 </resources>
