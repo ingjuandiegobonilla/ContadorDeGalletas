@@ -3,4 +3,5 @@
     <string name="TConteo">Galletas contadas</string>
     <string name="Rconteo">Resetear conteo</string>
     <string name="next">Siguiente Actividad</string>
+    <string name="Appname2">CookiesCounter2</string>
 </resources>
