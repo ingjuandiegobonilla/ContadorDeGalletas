@@ -13,14 +13,15 @@ import java.io.IOException;
 
 public class dos extends AppCompatActivity implements View.OnClickListener {
 
-    int movil;
-    ImageView seleccion;
+    int movil;  //Variable donde se guardara la imagen seleccionada
+    ImageView seleccion; //Imageview donde se mostrara la imagen seleccionada
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dos);
 
+        //Enlazar variables Java con elementos XML
         ImageView r1 = findViewById(R.id.r1);
         ImageView r2 = findViewById(R.id.r2);
         ImageView r3 = findViewById(R.id.r3);
@@ -28,7 +29,7 @@ public class dos extends AppCompatActivity implements View.OnClickListener {
         ImageView r5 = findViewById(R.id.r5);
         seleccion = findViewById(R.id.imageView);
         Button wallpaper = findViewById(R.id.wallpaper);
-
+        //Asignar posibilidad de ser clickeado a los objetos
         r1.setOnClickListener(this);
         r2.setOnClickListener(this);
         r3.setOnClickListener(this);
@@ -43,8 +44,8 @@ public class dos extends AppCompatActivity implements View.OnClickListener {
         switch (v.getId()) {
 
             case R.id.r1:
-                seleccion.setImageResource(R.drawable.r1);
-                movil = R.drawable.r1;
+                seleccion.setImageResource(R.drawable.r1); //Poner recurso en imageview seleccion
+                movil = R.drawable.r1; // guardar recurso en variable movil
                 break;
             case R.id.r2:
                 seleccion.setImageResource(R.drawable.r2);
@@ -63,11 +64,11 @@ public class dos extends AppCompatActivity implements View.OnClickListener {
                 movil = R.drawable.r5;
                 break;
             case R.id.wallpaper:
-                Bitmap fondo = BitmapFactory.decodeStream(getResources().openRawResource(movil));
-                WallpaperManager myWallpaperManager = WallpaperManager.getInstance(getApplicationContext());
+                Bitmap fondo = BitmapFactory.decodeStream(getResources().openRawResource(movil));  //Creación variable bitmap con la selección guardada en variable movil
+                WallpaperManager myWallpaperManager = WallpaperManager.getInstance(getApplicationContext()); //Se instancia el wallpaper manager
                 try {
-                    myWallpaperManager.setBitmap(fondo);
-                } catch (IOException e) {
+                    myWallpaperManager.setBitmap(fondo);  //se aplica el bitmap fondo al wallpaper del telefono
+                } catch (IOException e) {  //Exception -catch- always con -try-
                     e.printStackTrace();
                 }
                 break;

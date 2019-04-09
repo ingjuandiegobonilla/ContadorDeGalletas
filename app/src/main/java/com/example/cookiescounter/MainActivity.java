@@ -95,8 +95,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.Bdos:
-                Intent actividaddos = new Intent(this,dos.class);
-                startActivity(actividaddos);
+                Intent actividaddos = new Intent(this,dos.class); //Se direcciona la accion de este boton a la nueva actividad
+                startActivity(actividaddos); //Se ejecuta la nueva actividad
                 break;
 
 
