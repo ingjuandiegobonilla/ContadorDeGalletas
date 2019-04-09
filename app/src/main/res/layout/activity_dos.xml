@@ -6,4 +6,75 @@
     android:layout_height="match_parent"
     tools:context=".dos">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <ScrollView
+        android:layout_width="395dp"
+        android:layout_height="595dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/r1"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/r1"
+                />
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/r2"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/r2"
+                android:paddingLeft="15dp"
+                />
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/r3"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/r3"
+                android:paddingLeft="15dp"
+                />
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/r4"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/r4"
+                android:paddingLeft="15dp"
+                />
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/r5"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/r5"
+                android:paddingLeft="15dp"
+                />
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
