@@ -2,13 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.cookiescounter">
 
+    <uses-permission android:name="android.permission.INTERNET"/> <!--Permiso para que la aplicación pueda acceder a internet-->
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="false">
         <activity android:name=".dos"
             android:label="@string/Appname2">
             <intent-filter>
