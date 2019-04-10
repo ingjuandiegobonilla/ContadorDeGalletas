@@ -19,11 +19,12 @@ public class dos extends AppCompatActivity {
         setContentView(R.layout.activity_dos);
 
         Vista Vista1 = new Vista(this); //Declaramos un nuevo objeto llamad "Vista1" de nuestra clase "Vista" declarada mas abajo
+        Vista1.performClick();
         setContentView(Vista1);  // Declaramos que la vista de esta actividad es Vista1
 
     }
 }
- class Vista extends View implements {
+ class Vista extends View{
     float x = 50;  //Coordenadas X para dibujar
     float y = 50;  //COordenadas y para dibujar
     String accion = "accion"; //Usada para saber si el dedo esta sobre la pantalla o en movimiento
